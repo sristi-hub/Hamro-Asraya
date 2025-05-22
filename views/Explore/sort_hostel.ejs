@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Booking Interface</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="/stylesheets/Explore/sort_hostel.css">
+</head>
+<body>
+   
+    <div class="container">
+        <div class="main-content">
+            
+
+                <%- include('side_filter.ejs')%>
+
+         <!-- First 3 visible hostels -->
+<% hostels.slice(0, 3).forEach((hostel, index) => { %>
+  <div class="hostel-card">
+    <div class="hostel-image">
+      <img src="<%= hostel.images[0] %>" alt="<%= hostel.name %>">
+      <div class="image-count"><%= hostel.images.length %> images</div>
+    </div>
+    <div class="hostel-details">
+      <div class="hostel-title">
+        <%= index + 1 %>. <%= hostel.name %>
+        <% if (hostel.verified) { %>
+          <i class="fas fa-check-circle verified-badge"></i>
+        <% } %>
+      </div>
+      <div class="hostel-location">
+        <i class="fas fa-map-marker-alt"></i>
+        <%= hostel.location %>
+      </div>
+      <div class="star-rating">
+        <% for (let i = 0; i < Math.floor(hostel.ratings); i++) { %>
+          <i class="fas fa-star star"></i>
+        <% } %>
+        <span class="rating-text"><%= hostel.ratings %> Star Rating</span>
+      </div>
+      <div>
+        <span class="rating-badge">
+          <span class="rating-value"><%= hostel.ratings %></span>
+          <span class="rating-text"><%= hostel.ratings > 4.5 ? "Excellent" : hostel.ratings > 4 ? "Very Good" : "Good" %></span>
+        </span>
+        <span class="rating-text"><%= hostel.reviews || Math.floor(Math.random() * 500) + 100 %> reviews</span>
+      </div>
+      <div class="hostel-price">
+        <div class="action-buttons">
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+          <button class="view-btn">View Place</button>
+        </div>
+        <div class="price-details">
+          <div class="price-label">starting from</div>
+          <div class="price-value">Rs <%= hostel.monthlyRent %><span class="price-period">/month</span></div>
+          <div class="price-tax">excl. tax</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% }); %>
+
+<!-- Hidden Hostels after 3rd index -->
+<div id="more-hostels" class="collapsed-hostels">
+  <% hostels.slice(3).forEach((hostel, index) => { %>
+    <div class="hostel-card">
+      <div class="hostel-image">
+        <img src="<%= hostel.images[0] %>" alt="<%= hostel.name %>">
+        <div class="image-count"><%= hostel.images.length %> images</div>
+      </div>
+      <div class="hostel-details">
+        <div class="hostel-title">
+          <%= index + 4 %>. <%= hostel.name %>
+          <% if (hostel.verified) { %>
+            <i class="fas fa-check-circle verified-badge"></i>
+          <% } %>
+        </div>
+        <div class="hostel-location">
+          <i class="fas fa-map-marker-alt"></i>
+          <%= hostel.location %>
+        </div>
+        <div class="star-rating">
+          <% for (let i = 0; i < Math.floor(hostel.ratings); i++) { %>
+            <i class="fas fa-star star"></i>
+          <% } %>
+          <span class="rating-text"><%= hostel.ratings %> Star Rating</span>
+        </div>
+        <div>
+          <span class="rating-badge">
+            <span class="rating-value"><%= hostel.ratings %></span>
+            <span class="rating-text"><%= hostel.ratings > 4.5 ? "Excellent" : hostel.ratings > 4 ? "Very Good" : "Good" %></span>
+          </span>
+          <span class="rating-text"><%= hostel.reviews || Math.floor(Math.random() * 500) + 100 %> reviews</span>
+        </div>
+        <div class="hostel-price">
+          <div class="action-buttons">
+            <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            <button class="view-btn">View Place</button>
+          </div>
+          <div class="price-details">
+            <div class="price-label">starting from</div>
+            <div class="price-value">Rs <%= hostel.monthlyRent %><span class="price-period">/month</span></div>
+            <div class="price-tax">excl. tax</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% }); %>
+</div>
+
+<!-- Show More Button -->
+
+  <button class="show-more-btn" onclick="expandMoreHostels()">Show more results</button>
+
+<script>
+function expandMoreHostels() {
+    const moreHostels = document.getElementById("more-hostels");
+    moreHostels.classList.add("expanded");
+    document.querySelector(".show-more-btn").style.display = "none";
+}
+</script>
+
+</body>
+</html>

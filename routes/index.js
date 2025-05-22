@@ -20,4 +20,11 @@ router.get('/hostels', function (req, res, next) {
     hostels: hostelData.hostels
   });
 });
+
+router.get('/explore', function (req, res, next) {
+  res.render('Explore/sort_hostel.ejs', {
+    title: 'Hostel List',
+    hostels: hostelData.hostels
+  });
+});
 module.exports = router;
