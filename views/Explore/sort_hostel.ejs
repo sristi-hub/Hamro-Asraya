@@ -96,7 +96,9 @@
         <div class="hostel-price">
           <div class="action-buttons">
             <button class="favorite-btn"><i class="far fa-heart"></i></button>
-            <button class="view-btn">View Place</button>
+            <button class="view-btn" onclick="showDetails('<%= hostel.id %>')">View Place</button>
+
+
           </div>
           <div class="price-details">
             <div class="price-label">starting from</div>
@@ -118,7 +120,14 @@ function expandMoreHostels() {
     const moreHostels = document.getElementById("more-hostels");
     moreHostels.classList.add("expanded");
     document.querySelector(".show-more-btn").style.display = "none";
+
 }
+
+function showDetails(hostelId) {
+    window.location.href = `/hostel/${hostelId}`;
+}
+
+
 </script>
 
 </body>

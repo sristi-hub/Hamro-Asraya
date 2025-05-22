@@ -11,7 +11,12 @@ const hostelData={
       "gender": "Male",
       "availableRooms": 5,
       "images": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_IoBILezYC1GU8AOb_Owt-xSHwHTWHfy87Q&s"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_IoBILezYC1GU8AOb_Owt-xSHwHTWHfy87Q&s",        
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_IoBILezYC1GU8AOb_Owt-xSHwHTWHfy87Q&s",
+,        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_IoBILezYC1GU8AOb_Owt-xSHwHTWHfy87Q&s", 
+       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_IoBILezYC1GU8AOb_Owt-xSHwHTWHfy87Q&s"
+
+
       ],
       "contact": {
         "ownerName": "Ram Shrestha",

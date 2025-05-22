@@ -27,4 +27,15 @@ router.get('/explore', function (req, res, next) {
     hostels: hostelData.hostels
   });
 });
+router.get('/hostel/:_id', function (req, res, next) {
+
+ if(req.params._id==hostelData.id){
+   res.render('Hostel_view/hostel_view.ejs', {
+    title: 'Hostel List',
+    hostels: hostelData.hostels
+  });
+  res.send(400)
+ }
+});
+
 module.exports = router;
