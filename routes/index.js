@@ -10,7 +10,7 @@ const hostelData=require("../models/hostel")
 
 // Route to display list of Hotels
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('home', { title: 'Express' });
 });
 // Route to render hostels using static data
 router.get('/hostels', function (req, res, next) {
