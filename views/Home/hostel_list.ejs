@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Hostels in Nepal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="stylesheets/Home/hostel_list.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Top Hostels in Nepal</h1>
+      <p class="verification-text">
+        Verified by our Agent themselves. Haven't Verified yet? <a href="#">Verify now!</a>
+      </p>
+    </div>
+
+    <div class="hostels-container">
+      <% hostels.forEach((hostel, index) => { %>
+        <div class="hostel-card" >
+          <div class="hostel-image">
+            <img src="<%= hostel.images %>" alt="<%= hostel.name %>">
+            <div class="rooms-badge"><%= hostel.availableRooms %> Room<%= hostel.availableRooms > 1 ? 's' : '' %> available</div>
+          </div>
+          <div class="hostel-info">
+            <div class="hostel-name">
+              <%= hostel.name %>
+              <% if (hostel.verified) { %>
+                <span class="verified-badge"><i class="fas fa-check-circle"></i></span>
+              <% } %>
+            </div>
+            <div class="rating">
+              <% for (let i = 1; i <= Math.floor(hostel.rating); i++) { %>
+                <i class="fas fa-star"></i>
+              <% } %>
+              <% if (hostel.rating % 1 >= 0.5) { %>
+                <i class="fas fa-star-half-alt"></i>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <div class="wave-bg"></div>
+  <div class="wave-bg-2"></div>
+</body>
+</html>
