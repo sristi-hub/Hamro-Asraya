@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..\stylesheets\locrev.css">
+    <link rel="stylesheet" href="/stylesheets/locrev.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -27,7 +28,18 @@
   <div class="reviews-section">
     <div class="reviews-header">
       <h2 class="reviews-title">Reviews</h2>
-      <button class="leave-review-btn">Leave your review</button>
+      <button class="leave-review-btn" onclick="openPopup()">Leave your review</button>
+        <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h3>Send a Message</h3>
+      <form id="messageForm" onsubmit="submitMessage(event)">
+        <textarea name="message" rows="5" placeholder="Enter your message here..." required></textarea>
+        <button type="submit" >Send</button>
+      </form>
+    </div>
+  </div>
     </div>
     
     <div class="rating-summary">
@@ -38,7 +50,7 @@
       </div>
     </div>
     
-    <div class="review-list">
+<div class="review-list">
       <!-- Review 1 -->
      <div class="review-list">
   <% if (reviews.length === 0) { %>
@@ -67,8 +79,46 @@
 
       
       
-    </div>
+</div>
   </div>
 </div>
+<script>
+  function openPopup() {
+    document.getElementById("myModal").style.display = "block";
+  }
+
+  function closePopup() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("myModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  function submitMessage(event) {
+    event.preventDefault();
+    const message = document.querySelector("textarea[name='message']").value;
+    const hostelId = window.location.pathname.split("/")[2];
+
+    fetch(`/hostel/${hostelId}/review`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message }),
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert(data.message);
+      location.reload();
+    })
+    .catch(err => {
+      console.error("Error submitting review:", err);
+      alert("Failed to submit review.");
+    });
+  }
+</script>
+
 </body>
 </html>

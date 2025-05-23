@@ -41,7 +41,8 @@
         <div class="action-buttons">
           <button class="btn btn-outline"><i class="far fa-heart"></i></button>
           <button class="btn btn-outline"><i class="fas fa-share-alt"></i></button>
-          <button class="btn btn-primary" onclick="payment('<%= hostel.id %>') ">Rent now</button>
+          <button class="btn btn-primary" onclick="payment('<%= hostel._id %>')">Rent now</button>
+
         </div>
       </div>
     </div>
@@ -121,14 +122,14 @@
     </div>
   </div>
 
-<%- include('locrev.ejs', { reviews: reviews }) %>
+   <%- include('locrev.ejs', { review: reviews }) %>
 
   <%- include('../Home/footer.ejs') %>
    
 
 <script>
      function payment(hostelId) {
-    window.location.href = `payment/${hostelId}`;
+     window.location.href = `/payment/${hostelId}`;
 }
 </script>
 
