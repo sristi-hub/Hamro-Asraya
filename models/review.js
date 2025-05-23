@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const reviewSchema = new mongoose.Schema({
   hostel: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Hostel', 
+    ref: 'Hostel',
     required: true
   },
   reviewerName: {
@@ -27,7 +27,8 @@ const reviewSchema = new mongoose.Schema({
     required: true
   }
 }, {
+    collection: 'reviews',
   timestamps: true
 });
 
-module.exports = mongoose.model('Review', reviewSchema);
+module.exports = mongoose.model('Reviews', reviewSchema);  // Collection: reviews

@@ -1,66 +1,45 @@
-const mongoose = require("mongoose");
+// const mongoose = require('mongoose');
 
-const paymentSchema = new mongoose.Schema({
-  paymentId: {
-    type: String,
-    required: true
-  },
-  amountPaid: {
-    type: Number,
-    required: true
-  },
-  paymentDate: {
-    type: Date,
-    required: true
-  },
-  paymentMethod: {
-    type: String,
-    enum: ["Esewa", "Khalti", "Cash", "Bank Transfer"], // Add more if needed
-    required: true
-  },
-  status: {
-    type: String,
-    enum: ["Paid", "Pending", "Failed"],
-    default: "Pending"
-  }
-});
+// const userSchema = new mongoose.Schema({
+//   name: String,
+//   email: String,
+//   phone:String
+//   // add other fields according to your DB
+// }, { collection: 'studentUser' });
 
-const userPaymentSchema = new mongoose.Schema({
+// module.exports = mongoose.model('User', userSchema);
+
+
+const mongoose = require('mongoose');
+
+const userSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true
   },
+  avatar: {
+    type: String,
+    default: 'https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740'
+  },
   email: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   phone: {
+    type: String
+  },
+  password: {
     type: String,
     required: true
   },
-  hostelId: {
-    type: String,
-    required: true
-  },
-  hostelName: {
-    type: String,
-    required: true
-  },
-  roomType: {
-    type: String,
-    enum: ["Single", "Double", "Triple"],
-    required: true
-  },
-  monthlyRent: {
-    type: Number,
-    required: true
-  },
-  payment: {
-    type: paymentSchema,
-    required: true
+  dateJoined: {
+    type: Date,
+    default: Date.now
   }
+}, {
+  collection: 'studentUser', // Specify exact collection name
+  timestamps: true
 });
 
-const Payment = mongoose.model("Payment", userPaymentSchema);
-
-module.exports = Payment;
+module.exports = mongoose.model('User', userSchema);  // Collection: user

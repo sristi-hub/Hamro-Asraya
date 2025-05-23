@@ -259,24 +259,59 @@
       background-color: rgba(0,0,0,0.4);
     }
 
-    /* Modal Content */
+   .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+
     .modal-content {
-      background-color: #fefefe;
-      margin: 15% auto;
+      background-color: #fff;
+      margin: 10% auto;
       padding: 20px;
       border-radius: 10px;
-      width: 300px;
+      width: 350px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      position: relative;
     }
 
     .close {
-      color: #aaa;
-      float: right;
-      font-size: 24px;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 22px;
       font-weight: bold;
+      color: #aaa;
       cursor: pointer;
     }
 
     .close:hover {
       color: black;
+    }
+
+    input[type="text"], textarea {
+    
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      background-color: #6a3de8;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049;
     }

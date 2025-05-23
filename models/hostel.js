@@ -135,5 +135,5 @@ const hostelSchema = new mongoose.Schema({
   verified: Boolean
 });
 
-module.exports = mongoose.model("Hostel", hostelSchema);
+module.exports = mongoose.model("hostel", hostelSchema);
 
