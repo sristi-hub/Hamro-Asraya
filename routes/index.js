@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const Hostel=require("../models/hostel")
+const Review=require("../models/review")
 
 // Homepage route
 router.get('/', async function(req, res, next) {
@@ -38,17 +39,25 @@ router.get('/explore', async function(req, res, next) {
   }
 });
 
-// Individual hostel view page
+
 router.get('/hostel/:_id', async function(req, res, next) {
   try {
-    const hostel = await Hostel.findOne({ _id: req.params._id });
+    const hostelId = req.params._id;
+
+    // Find the hostel
+    const hostel = await Hostel.findById(hostelId);
     if (!hostel) {
       return res.status(404).send('Hostel not found');
     }
+
+    // Find reviews for the hostel
+    const reviews = await Review.find({ hostel: hostelId }).sort({ createdAt: -1 });
+
+    // Render hostel view page and pass reviews
     res.render('Hostel_view/hostel_view', {
       title: hostel.name,
-      hostel
-    });
+      hostel,
+      reviews: reviews,     });
   } catch (err) {
     next(err);
   }

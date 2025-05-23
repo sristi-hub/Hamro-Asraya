@@ -18,10 +18,10 @@
     </div>
 
     <div class="hostels-container">
-      <% hostels.slice(2).forEach((hostel, index) => { %>
+      <% hostels.slice(1).forEach((hostel, index) => { %>
         <div class="hostel-card" >
           <div class="hostel-image">
-            <img src="<%= hostel.images %>" alt="<%= hostel.name %>">
+<img src="<%= hostel.images %>" alt="<%= hostel.name %>" onclick="showDetails('<%= hostel._id %>')" style="cursor:pointer;">
             <div class="rooms-badge"><%= hostel.availableRooms %> Room<%= hostel.availableRooms > 1 ? 's' : '' %> available</div>
           </div>
           <div class="hostel-info">
@@ -47,6 +47,10 @@
     </div>
   </div>
 
-  
+  <script>
+    function showDetails(hostelId) {
+    window.location.href = `hostel/${hostelId}`;
+}
+  </script>
 </body>
 </html>
