@@ -13,12 +13,24 @@ router.get('/', async function(req, res, next) {
   }
 });
 
-// Signup page
-router.get('/signup', function (req, res, next) {
+router.get('/sign_up', function (req, res, next) {
   res.render('Sign_Up/sign_up.ejs', {
-    title: 'Sign Up'
+    // title: 'Hostel List',
+    // hostels: hostelData.hostels
   });
 });
+
+
+router.get('/log_in', function (req, res, next) {
+  res.render('Sign_Up/log_in', {
+    // title: 'Hostel List',
+    // hostels: hostelData.hostels
+  });
+});
+
+
+
+
 
 // Explore/sort page
 router.get('/explore', exploreHandler);

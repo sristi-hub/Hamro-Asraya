@@ -34,6 +34,13 @@ body {
   margin: 20px;
 }
 
+/* Login container (centered version) */
+.login-container {
+  max-width: 450px;
+  min-height: auto;
+  flex-direction: column;
+}
+
 /* Left side - Image container */
 .auth-image {
   flex: 1;
@@ -72,9 +79,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 450px;
   background-color: white;
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .auth-form-container::before {
@@ -198,11 +206,29 @@ body {
   color: #7e22ce;
 }
 
+/* Login options (Remember me and Forgot password) */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.forgot-password {
+  color: #7e22ce;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
 /* Checkbox styles */
 .form-check {
   display: flex;
   align-items: center;
-  margin-bottom: 25px;
 }
 
 .form-check input {
@@ -296,6 +322,7 @@ body {
 .social-buttons {
   display: flex;
   gap: 15px;
+  margin-bottom: 25px;
 }
 
 .social-button {
@@ -322,6 +349,23 @@ body {
 .social-button img {
   height: 24px;
   width: 24px;
+}
+
+/* Hostel owner link */
+.owner-link {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.owner-link a {
+  color: #7e22ce;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.owner-link a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive styles */
@@ -364,6 +408,12 @@ body {
   
   .auth-form-container {
     padding: 30px 20px;
+  }
+  
+  .login-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
   }
 }
 
