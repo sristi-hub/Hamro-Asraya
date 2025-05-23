@@ -8,7 +8,7 @@
    <link rel="stylesheet" href="stylesheets/Explore/sort_hostel.css">
 </head>
 <body>
-   
+  <div class = "mainbody">
     <div class="container">
        <%- include('../Home/nav.ejs') %>
         <div class="main-content">
@@ -112,11 +112,18 @@
   <% }); %>
 </div>
 
+
 <!-- Show More Button -->
 
   <button class="show-more-btn" onclick="expandMoreHostels()">Show more results</button>
 
+        </div>
+</div>
+
+<div style = "margin-top:100px"></div>
   <%- include('../Home/fotter.ejs') %>
+</div>
+
 
 <script>
 function expandMoreHostels() {
