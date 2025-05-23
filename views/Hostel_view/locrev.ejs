@@ -40,76 +40,33 @@
     
     <div class="review-list">
       <!-- Review 1 -->
+     <div class="review-list">
+  <% if (reviews.length === 0) { %>
+    <p>No reviews yet.</p>
+  <% } else { %>
+    <% reviews.forEach(function(review) { %>
       <div class="review-item">
         <div class="reviewer-avatar">
-          <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740" alt="Reviewer">
+          <img src="<%= review.avatar %>" alt="Reviewer">
         </div>
         <div class="review-content">
           <div class="reviewer-info">
-            <h4 class="reviewer-name">US Amazing</h4>
+            <h4 class="reviewer-name"><%= review.reviewerName %></h4>
             <button class="review-flag">⚑</button>
           </div>
           <div class="review-details">
-            <span class="review-rating">5/5 Amazing</span>
-            <span class="review-date">1 week ago</span>
+            <span class="review-rating"><%= review.rating %></span>
+            <span class="review-date"><%= review.date %></span>
           </div>
-          <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, duis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p class="review-text"><%= review.text %></p>
         </div>
       </div>
+    <% }); %>
+  <% } %>
+</div>
+
       
-      <!-- Review 2 -->
-      <div class="review-item">
-        <div class="reviewer-avatar">
-          <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740" alt="Reviewer">
-        </div>
-        <div class="review-content">
-          <div class="reviewer-info">
-            <h4 class="reviewer-name">US Amazing</h4>
-            <button class="review-flag">⚑</button>
-          </div>
-          <div class="review-details">
-            <span class="review-rating">4/5 Great</span>
-            <span class="review-date">2 weeks ago</span>
-          </div>
-          <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, duis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-      </div>
       
-      <!-- Review 3 -->
-      <div class="review-item">
-        <div class="reviewer-avatar">
-          <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740" alt="Reviewer">
-        </div>
-        <div class="review-content">
-          <div class="reviewer-info">
-            <h4 class="reviewer-name">US Amazing</h4>
-            <button class="review-flag">⚑</button>
-          </div>
-          <div class="review-details">
-            <span class="review-rating">5/5 Amazing</span>
-            <span class="review-date">3 days ago</span>
-          </div>
-          <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, duis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-      </div>
-      
-      <!-- Review 4 -->
-      <div class="review-item">
-        <div class="reviewer-avatar">
-          <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740" alt="Reviewer">
-        </div>
-        <div class="review-content">
-          <div class="reviewer-info">
-            <h4 class="reviewer-name">US Amazing</h4>
-            <button class="review-flag">⚑</button>
-          </div>
-          <div class="review-details">
-            <span class="review-rating">5/5 Excellent</span>
-            <span class="review-date">1 month ago</span>
-          </div>
-          <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, duis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-      </div>
     </div>
   </div>
 </div>
