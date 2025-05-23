@@ -37,7 +37,7 @@ ul {
 }
 
 /* Header Styles */
-header {
+/* header {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px 0;
@@ -88,7 +88,7 @@ nav ul li a.active {
     border-radius: 50%;
     margin-right : 10px;
     
-}
+} */
 
 /* Main Content Styles */
 main {
@@ -313,7 +313,7 @@ main {
 }
 
 /* Footer Styles */
-footer {
+/* footer {
     background-color: #6a26cd;
     color: white;
     padding: 50px 0 20px;
@@ -402,7 +402,7 @@ footer {
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 14px;
-}
+} */
 
 /* Responsive Styles */
 @media (max-width: 992px) {

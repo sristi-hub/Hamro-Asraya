@@ -1,179 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aashraya - Hostel Booking</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment - <%= hostel.name %></title>
+  <link rel="stylesheet" href="/stylesheets/payment.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="#">
-                        <i class="fas fa-home purple-icon"></i>
-                    </a>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#">Explore</a></li>
-                        <li><a href="#" class="purple-text">Hostels</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="user-profile">
-                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Profile">
-                    <span>John D.</span>
-                </div>
-            </div>
+  <!-- Header -->
+  <!-- <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="/">
+            <i class="fas fa-home purple-icon"></i>
+          </a>
         </div>
-    </header>
-
-    <main>
-        <div class="container">
-            <div class="breadcrumb">
-                <a href="#">Kathmandu</a> &gt; 
-                <a href="#">Putalisadak</a> &gt; 
-                <a href="#">Sagun Boys Hostel</a>
-            </div>
-
-            <div class="booking-details">
-                <div class="booking-left">
-                    <h2 class="room-type">Double room - 2 single beds.</h2>
-                    
-                    <div class="hostel-info">
-                        <h3>Sagun Girls Hostel</h3>
-                        <p><i class="fas fa-map-marker-alt"></i> Putalisadak, Kathmandu</p>
-                    </div>
-
-                    <div class="booking-dates">
-                        <div class="date-box">
-                            <h4>Thursday, Dec 8</h4>
-                            <p>Check-in</p>
-                        </div>
-                        <div class="date-box">
-                            <h4>Friday, Dec 9</h4>
-                            <p>Check-out</p>
-                        </div>
-                    </div>
-
-                    <div class="verification-box">
-                        <h4>Verify through our agent.</h4>
-                        <p>Send our agents to the location prior to your visit. Get verification now!</p>
-                        
-                        <div class="verification-expanded">
-                            <h4>Verify through our agent.</h4>
-                            <p>Send our agents prior to the location to overview your hostels. Ensure that you have everything you need according to your personalized needs and comfort.</p1>
-                            <br>Includes Extra Charges</br>
-                            <button class="close-btn"><i class="fas fa-times"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="booking-right">
-                    <div class="price-tag">
-                        <h3>Rs 1500<span>/night</span></h3>
-                    </div>
-
-                    <div class="room-image">
-                        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Room Image">
-                        <div class="room-caption">
-                            <p>Sagun Girls Hostel</p>
-                            <p>Double room - 2 twin beds - Simple Furnishing</p>
-                        </div>
-                    </div>
-
-                    <p class="protection-note">Your booking is protected by us.</p>
-
-                    <div class="price-details">
-                        <h4>Price Details</h4>
-                        <div class="price-row">
-                            <span>Base Fare</span>
-                            <span>Rs 15000</span>
-                        </div>
-                        <div class="price-row">
-                            <span>Verify Fee</span>
-                            <span>Rs 500</span>
-                        </div>
-                        <div class="price-row">
-                            <span>Discount</span>
-                            <span>Rs -2000</span>
-                        </div>
-                        <div class="price-row total">
-                            <span>Total</span>
-                            <span>Rs 13500</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <nav>
+          <ul>
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/explore">Explore</a></li>
+            <li><a href="/hostels" class="purple-text">Hostels</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="user-profile">
+          <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcReXPFAJ5cUhfTLDRA7ZJlBZdwOmO7AfLRhazE1rl5-nJhk0NHeTtwX983IoqiSjrPB-R4OiIN_uaPO9jqW41E2Ww" alt="User Profile"/>
+          <span>Asmita</span>
         </div>
-    </main>
+      </div>
+    </div>
+  </header> -->
+  <%- include('../Home/nav.ejs') %>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Hamro <span class="logo-text">आश्रय</span></h3>
-                    <p>Trust. Safety. Comfort.</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Quick links</h4>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Hostels</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Refund policy</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Explore</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#">Privacy policy</a></li>
-                            <li><a href="#">Refund policy</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">About</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Social media</h4>
-                        <ul>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">LinkedIn</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column newsletter">
-                        <h4>Newsletter</h4>
-                        <p>Kindly subscribe to our newsletter to get updates on rooms and available discount.</p>
-                        <div class="newsletter-form">
-                            <input type="email" placeholder="Enter your email">
-                            <button>Subscribe</button>
-                        </div>
-                    </div>
-                </div>
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="breadcrumb">
+      
+        <a href="#"><%= hostel.location %></a>
+      </div>
+
+      <div class="booking-details">
+        <div class="booking-left">
+          <h2 class="room-type"><%= hostel.roomType %></h2>
+
+          <div class="hostel-info">
+            <h3><%= hostel.name %></h3>
+            <p><i class="fas fa-map-marker-alt"></i> <%= hostel.location %></p>
+          </div>
+
+          <div class="booking-dates">
+            <div class="date-box">
+              <h4>67</h4>
+              <p>Check-in</p>
             </div>
-            
-            <div class="footer-bottom">
-                <p>Hamro Aashraya 2023</p>
+            <div class="date-box">
+              <h4></h4>56</h4>
+              <p>Check-out</p>
             </div>
+          </div>
+
+          <div class="verification-box">
+            <h4>Verify through our agent.</h4>
+            <p>Send our agents to the location prior to your visit. Get verification now!</p>
+            <div class="verification-expanded">
+              <h4>Details:</h4>
+              <p>We send a field agent to verify the hostel and ensure it meets your expectations and comfort. This includes a small service charge.</p>
+              <p><strong>Includes Extra Charges</strong></p>
+              <button class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+          </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="booking-right">
+          <div class="price-tag">
+            <h3>Rs 800-<span>/night</span></h3>
+          </div>
+
+          <div class="room-image">
+            <img src="<%= hostel.images %>" alt="Room Image"/>
+            <div class="room-caption">
+              <p><%= hostel.name %></p>
+              <p><%= hostel.description %></p>
+            </div>
+          </div>
+
+          <p class="protection-note">Your booking is protected by us.</p>
+
+          <div class="price-details">
+            <h4>Price Details</h4>
+            <div class="price-row">
+              <span>Base Fare</span>
+              <span>Rs 7788%></span>
+            </div>
+            <div class="price-row">
+              <span>Verification Fee</span>
+              <span>Rs 678</span>
+            </div>
+            <div class="price-row">
+              <span>Discount</span>
+              <span>Rs -800</span>
+            </div>
+            <div class="price-row total">
+              <span>Total</span>
+              <span>Rs 700</span>
+            </div>
+          </div>
+
+          <form action="/process-payment" method="POST">
+            <input type="hidden" name="hostelId" value="<%= hostel._id %>"/>
+            <input type="hidden" name="amount" value="600"/>
+            <button type="submit" class="payment-button">Proceed to Pay</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <!-- <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>Hamro <span class="logo-text">आश्रय</span></h3>
+          <p>Trust. Safety. Comfort.</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Quick links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Hostels</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Refund policy</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Explore</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Refund policy</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Social media</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column newsletter">
+            <h4>Newsletter</h4>
+            <p>Kindly subscribe to our newsletter to get updates on rooms and discounts.</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Enter your email"/>
+              <button>Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; Hamro Aashraya 2025</p>
+      </div>
+    </div>
+  </footer> -->
+
+  <script src="/script.js"></script>
 </body>
 </html>

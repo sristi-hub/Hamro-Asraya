@@ -8,7 +8,7 @@
    <link rel="stylesheet" href="stylesheets/Explore/sort_hostel.css">
 </head>
 <body>
-   
+  <div class = "mainbody">
     <div class="container">
        <%- include('../Home/nav.ejs') %>
         <div class="main-content">
@@ -50,7 +50,7 @@
       <div class="hostel-price">
         <div class="action-buttons">
           <button class="favorite-btn"><i class="far fa-heart"></i></button>
-            <button class="view-btn" onclick="showDetails('<%= hostel.id %>') ">View Place</button>
+            <button class="view-btn" onclick="showDetails('<%= hostel._id %>') ">View Place</button>
         </div>
         <div class="price-details">
           <div class="price-label">starting from</div>
@@ -97,7 +97,7 @@
         <div class="hostel-price">
           <div class="action-buttons">
             <button class="favorite-btn"><i class="far fa-heart"></i></button>
-            <button class="view-btn" onclick="showDetails('<%= hostel.id %>') ">View Place</button>
+            <button class="view-btn" onclick="showDetails('<%= hostel._id %>') ">View Place</button>
 
 
           </div>
@@ -112,12 +112,17 @@
   <% }); %>
 </div>
 
+
 <!-- Show More Button -->
 
   <button class="show-more-btn" onclick="expandMoreHostels()">Show more results</button>
 
-  <%- include('../Home/fotter.ejs') %>
+        </div>
+</div>
 
+ <div style="margin-top: 100px;"></div>
+   <%- include('../Home/footer.ejs') %>
+  </div> 
 <script>
 function expandMoreHostels() {
     const moreHostels = document.getElementById("more-hostels");

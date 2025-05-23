@@ -12,14 +12,14 @@ body {
 }
 
 /* Footer styles */
-.footer {
+.footer{
   background-color: #7e22ce;
   color: white;
   padding: 0;
 }
 
 .footer-content {
-  min-width: 1500px;
+  min-width: 1400px;
   margin: 0 auto;
   padding: 50px 20px;
   display: grid;
