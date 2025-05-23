@@ -7,13 +7,15 @@ const Review=require("../models/review")
 router.get('/', async function(req, res, next) {
   try {
     const hostels = await Hostel.find();
-    res.render('home', { title: 'Express', hostels });
+    res.render('home', { title: 'Express', hostels,
+      activePage: 'home' 
+     });
   } catch (err) {
     next(err);
   }
 });
 
-router.get('/sign_up', function (req, res, next) {
+router.get('/signup', function (req, res, next) {
   res.render('Sign_Up/sign_up.ejs', {
     // title: 'Hostel List',
     // hostels: hostelData.hostels
@@ -28,15 +30,74 @@ router.get('/log_in', function (req, res, next) {
   });
 });
 
-
-
-
-
 // Explore/sort page
 router.get('/explore', async function(req, res, next) {
   try {
     const hostels = await Hostel.find();
-    res.render('Explore/sort_hostel.ejs', {
+    res.render('Explore/sort_hostel', {
+      title: 'Hostel List',
+      hostels,
+      activePage: 'explore'
+    });
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.post('/explore', async function(req, res, next) {
+  try {
+    const hostels = await Hostel.find();
+    res.render('Explore/sort_hostel', {
+      title: 'Hostel List',
+      hostels,
+      activePage: 'explore'
+    });
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.get('/verify', async function(req, res, next) {
+  try {
+    const hostels = await Hostel.find();
+    res.render('verification_form/verification_form.ejs', {
+      title: 'Hostel List',
+      hostels
+    });
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.post('/verify2', async function(req, res, next) {
+  try {
+    const hostels = await Hostel.find();
+    res.render('verification_form/2verification.ejs', {
+      title: 'Hostel List',
+      hostels
+    });
+  } catch (err) {
+    next(err);
+  }
+});
+
+
+router.post('/verify3', async function(req, res, next) {
+  try {
+    const hostels = await Hostel.find();
+    res.render('verification_form/3verification.ejs', {
+      title: 'Hostel List',
+      hostels
+    });
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.post('/complever', async function(req, res, next) {
+  try {
+    const hostels = await Hostel.find();
+    res.render('verification_form/complever.ejs', {
       title: 'Hostel List',
       hostels
     });

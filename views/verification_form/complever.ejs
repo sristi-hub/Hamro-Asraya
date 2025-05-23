@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verification in Progress</title>
+  <link rel="stylesheet" href="\stylesheets\verification_form\complever.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="progress-container">
+    <div class="progress-card">
+      <!-- Header -->
+      <div class="progress-header">
+        <h1>Verification in Progress</h1>
+        <p class="status-subtitle">We're reviewing your application</p>
+      </div>
+
+      <!-- Progress Steps -->
+      <div class="verification-steps">
+        <div class="step-completed">
+          <div class="step-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="step-content">
+            <h3>Application Submitted</h3>
+            <p>Your verification form has been successfully submitted</p>
+          </div>
+        </div>
+
+        <div class="step active">
+          <div class="step-icon">
+            <div class="mini-spinner"></div>
+          </div>
+          <div class="step-content">
+            <h3>Document Review</h3>
+            <p>Our team is reviewing your documents and information</p>
+          </div>
+        </div>
+
+        <div class="step pending">
+          <div class="step-icon">
+            <div class="step-number">3</div>
+          </div>
+          <div class="step-content">
+            <h3>Final Approval</h3>
+            <p>Final verification and account activation</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Information Section -->
+      <div class="info-section">
+        <div class="info-card">
+          <div class="info-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="info-content">
+            <h4>Processing Time</h4>
+            <p>Verification typically takes 2-5 days.</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2"/>
+              <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="info-content">
+            <h4>Email Updates</h4>
+            <p>We'll send updates to your registered email address</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reference Number -->
+      <div class="reference-section">
+        <div class="reference-card">
+          <h4>Reference Number</h4>
+          <div class="reference-number">VER-2024-001234</div>
+          <p>Save this number for future reference</p>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <button type="button" class="btn-secondary">Pending</button>
+         <button type="button" id ="go-back" onclick="window.location.href='/'">Done</button>
+      </div>
+
+      <!-- Support Section -->
+      <div class="support-section">
+        <p>Need help? <a href="#" class="support-link">Contact Support</a> or call us at <strong>+234 800 123 4567</strong></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
