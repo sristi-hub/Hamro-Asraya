@@ -27,18 +27,16 @@
       <div>
         <%- include('Home/filter.ejs') %>
       </div>
-    <div style="margin-top: 130px;"></div>
+       
+    </main>
+      <div style="margin-top: 130px;"></div>
     <%- include('Home/hostel_list.ejs', { hostels: hostels }) %>
-  
+
+    
     <div style="margin-top: 100px;"></div>
     <%- include('Home/offers.ejs') %>
-      <div style="margin-top: 100px;"></div>
-    <%- include('Home/fotter.ejs') %>
-        
-    </main>
-   
-    <script src = "javascripts\script1.js"></script>
-
   </div> 
+    <%- include('Home/footer.ejs') %>
+    <script src = "javascripts\script1.js"></script>
     </body>
 </html>
