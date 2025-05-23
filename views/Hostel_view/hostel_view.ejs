@@ -239,94 +239,114 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="hostel-header">
-            <div class="hostel-info">
-                <div class="hostel-title">
-                    1. Sagun Girls Hostel
-                    <i class="fas fa-check-circle verified-badge"></i>
-                </div>
-                <div class="hostel-location">
-                    <i class="fas fa-map-marker-alt location-icon"></i>
-                    PutaliSadak, 7 Kathmandu
-                </div>
-                <div class="star-rating">
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <span class="rating-text">5 Star Rating</span>
-                </div>
-            </div>
-            <div class="price-section">
-                <div class="price-label">starting from</div>
-                <div class="price-value">Rs 1500<span class="price-period">/week</span></div>
-                <div class="price-tax">excl. tax</div>
-                <div class="action-buttons">
-                    <button class="btn btn-outline">
-                        <i class="far fa-heart"></i>
-                    </button>
-                    <button class="btn btn-outline">
-                        <i class="fas fa-share-alt"></i>
-                    </button>
-                    <button class="btn btn-primary">Rent now</button>
-                </div>
-            </div>
+  <div class="container">
+    <div class="hostel-header">
+      <div class="hostel-info">
+        <div class="hostel-title">
+          <%= hostel.name %>
+          <% if (hostel.verified) { %>
+            <i class="fas fa-check-circle verified-badge" title="Verified"></i>
+          <% } %>
         </div>
-
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-05-23%20at%2000.33.01-gXLlMAKmw6D3qVc5SZFRdGHIywTozk.png" alt="Hostel Pool View">
-            </div>
-            <div class="gallery-item">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-05-23%20at%2000.33.01-gXLlMAKmw6D3qVc5SZFRdGHIywTozk.png" alt="Hostel Room 1">
-            </div>
-            <div class="gallery-item">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-05-23%20at%2000.33.01-gXLlMAKmw6D3qVc5SZFRdGHIywTozk.png" alt="Hostel Room 2">
-            </div>
-            <div class="gallery-item">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-05-23%20at%2000.33.01-gXLlMAKmw6D3qVc5SZFRdGHIywTozk.png" alt="Hostel Room 3">
-            </div>
-            <div class="gallery-item">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-05-23%20at%2000.33.01-gXLlMAKmw6D3qVc5SZFRdGHIywTozk.png" alt="Hostel Room 4">
-            </div>
-            <button class="view-all-btn">View all photos</button>
+        <div class="hostel-location">
+          <i class="fas fa-map-marker-alt location-icon"></i>
+          <%= hostel.location %>
         </div>
-
-        <div class="divider"></div>
-
-        <div class="overview-section">
-            <h2 class="section-title">Overview</h2>
-            <p class="overview-text">
-                Sagun Girls Hostel offers safe, clean, and affordable accommodation for female students and working women. Located in a convenient and accessible area, the hostel provides essential amenities including furnished rooms, home-cooked meals, Wi-Fi, and 24/7 security—creating a comfortable and secure environment for its residents. The hostel encourages a friendly and supportive atmosphere where residents can feel at home. Regular cleaning and maintenance ensure a hygienic living space. Shared and private room options are available to suit different needs and budgets. With a focus on safety, comfort, and community, Sagun Girls Hostel is an ideal choice for women seeking reliable accommodation.
-            </p>
-
-            <div class="amenities">
-                <div class="rating-badge">
-                    <div class="rating-value">4.2</div>
-                    <div class="rating-label">Verified</div>
-                </div>
-                <div class="amenity-item">
-                    <i class="fas fa-broom amenity-icon"></i>
-                    <div class="amenity-text">Clean Room</div>
-                </div>
-                <div class="amenity-item">
-                    <i class="fas fa-toilet amenity-icon"></i>
-                    <div class="amenity-text">Clean Washroom</div>
-                </div>
-                <div class="amenity-item">
-                    <i class="fas fa-map-marker-alt amenity-icon"></i>
-                    <div class="amenity-text">Good Location</div>
-                </div>
-                <div class="amenity-item">
-                    <i class="fas fa-shield-alt amenity-icon"></i>
-                    <div class="amenity-text">Safe</div>
-                </div>
-            </div>
+        <div class="star-rating">
+          <% for (let i = 0; i < Math.floor(hostel.ratings); i++) { %>
+            <i class="fas fa-star star"></i>
+          <% } %>
+          <% if (hostel.ratings % 1 >= 0.5) { %>
+            <i class="fas fa-star-half-alt star"></i>
+          <% } %>
+          <span class="rating-text"><%= hostel.ratings %></span>
         </div>
-
-        <div class="divider"></div>
+      </div>
+      <div class="price-section">
+        <div class="price-label">Starting from</div>
+        <div class="price-value">Rs <%= hostel.monthlyRent %><span class="price-period">/month</span></div>
+        <div class="price-tax">Excl. tax</div>
+        <div class="action-buttons">
+          <button class="btn btn-outline"><i class="far fa-heart"></i></button>
+          <button class="btn btn-outline"><i class="fas fa-share-alt"></i></button>
+          <button class="btn btn-primary">Rent now</button>
+        </div>
+      </div>
     </div>
+
+    <div class="gallery">
+      <% hostel.images.forEach((img, index) => { %>
+        <div class="gallery-item">
+          <img src="<%= img %>" alt="Hostel Image <%= index + 1 %>">
+        </div>
+      <% }) %>
+      <button class="view-all-btn">View all photos</button>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="overview-section">
+      <h2 class="section-title">Overview</h2>
+      <p class="overview-text"><%= hostel.description %></p>
+
+      <div class="amenities">
+        <div class="rating-badge">
+          <div class="rating-value"><%= hostel.ratings %></div>
+          <% if (hostel.verified) { %><div class="rating-label">Verified</div><% } %>
+        </div>
+
+        <% hostel.facilities.forEach(facility => { %>
+          <div class="amenity-item">
+            <i class="fas fa-check amenity-icon"></i>
+            <div class="amenity-text"><%= facility %></div>
+          </div>
+        <% }) %>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2 class="section-title">Room Types</h2>
+      <div class="amenities">
+        <% hostel.roomType.forEach(room => { %>
+          <div class="amenity-item">
+            <i class="fas fa-bed amenity-icon"></i>
+            <div class="amenity-text"><%= room %> Room</div>
+          </div>
+        <% }) %>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2 class="section-title">Contact Information</h2>
+      <div class="amenities">
+        <div class="amenity-item">
+          <i class="fas fa-user amenity-icon"></i>
+          <div class="amenity-text"><%= hostel.contact.ownerName %></div>
+        </div>
+        <div class="amenity-item">
+          <i class="fas fa-phone amenity-icon"></i>
+          <div class="amenity-text"><%= hostel.contact.phone %></div>
+        </div>
+        <div class="amenity-item">
+          <i class="fas fa-envelope amenity-icon"></i>
+          <div class="amenity-text"><%= hostel.contact.email %></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2 class="section-title">General Info</h2>
+      <div class="amenities">
+        <div class="amenity-item">
+          <i class="fas fa-restroom amenity-icon"></i>
+          <div class="amenity-text">Gender: <%= hostel.gender %></div>
+        </div>
+        <div class="amenity-item">
+          <i class="fas fa-door-open amenity-icon"></i>
+          <div class="amenity-text">Available Rooms: <%= hostel.availableRooms %></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

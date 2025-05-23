@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hostel Booking Interface</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <link rel="stylesheet" href="/stylesheets/Explore/sort_hostel.css">
+   <link rel="stylesheet" href="stylesheets/Explore/sort_hostel.css">
 </head>
 <body>
    
@@ -49,7 +49,7 @@
       <div class="hostel-price">
         <div class="action-buttons">
           <button class="favorite-btn"><i class="far fa-heart"></i></button>
-          <button class="view-btn">View Place</button>
+            <button class="view-btn" onclick="showDetails('<%= hostel.id %>') ">View Place</button>
         </div>
         <div class="price-details">
           <div class="price-label">starting from</div>
@@ -96,7 +96,7 @@
         <div class="hostel-price">
           <div class="action-buttons">
             <button class="favorite-btn"><i class="far fa-heart"></i></button>
-            <button class="view-btn" onclick="showDetails('<%= hostel.id %>')">View Place</button>
+            <button class="view-btn" onclick="showDetails('<%= hostel.id %>') ">View Place</button>
 
 
           </div>
@@ -124,8 +124,9 @@ function expandMoreHostels() {
 }
 
 function showDetails(hostelId) {
-    window.location.href = `/hostel/${hostelId}`;
+    window.location.href = `hostel/${hostelId}`;
 }
+
 
 
 </script>
