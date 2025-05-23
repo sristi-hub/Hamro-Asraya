@@ -41,7 +41,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
+  padding: 0;  
 
 }
 
@@ -49,7 +49,6 @@ header {
     display: flex;
     align-items: center;
     margin-right: 50px;
-    gap:5px;
 }
 
 .user-profile img {
@@ -59,3 +58,4 @@ header {
     margin-right : 10px;
     
 }
+

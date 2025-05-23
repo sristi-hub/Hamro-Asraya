@@ -41,21 +41,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
+  padding: 0;  
 
 }
 
-.user-profile {
-    display: flex;
-    align-items: center;
-    margin-right: 50px;
-    gap:5px;
+.signup {
+  background-color: #7e22ce;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-
-.user-profile img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right : 10px;
-    
+.signup:hover {
+  background-color: #6b21a8;
 }

@@ -39,6 +39,12 @@ router.get('/hostel/:_id', function (req, res, next) {
   });
 });
 
+router.get('/signup', function (req, res, next) {
+  res.render('Sign_Up/sign_up.ejs', {
+    title: 'Hostel List',
+    hostels: hostelData.hostels
+  });
+});
 
 
 router.get('/hostel/payment/:_id', function(req, res, next) {
