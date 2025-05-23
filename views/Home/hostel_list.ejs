@@ -18,7 +18,7 @@
     </div>
 
     <div class="hostels-container">
-      <% hostels.forEach((hostel, index) => { %>
+      <% hostels.slice(2).forEach((hostel, index) => { %>
         <div class="hostel-card" >
           <div class="hostel-image">
             <img src="<%= hostel.images %>" alt="<%= hostel.name %>">

@@ -20,4 +20,28 @@ router.get('/hostels', function (req, res, next) {
     hostels: hostelData.hostels
   });
 });
+
+router.get('/explore', function (req, res, next) {
+  res.render('Explore/sort_hostel.ejs', {
+    title: 'Hostel List',
+    hostels: hostelData.hostels
+  });
+});
+router.get('/hostel/:_id', function (req, res, next) {
+  const hostelId = req.params._id;
+  const hostel = hostelData.hostels.find(h => h.id === hostelId);
+  if (!hostel) {
+    return res.status(404).send('Hostel not found');
+  }
+  res.render('Hostel_view/hostel_view', {
+    title: hostel.name,
+    hostel: hostel
+  });
+});
+
+
+
+// router.get('/hostel', function(req, res, next) {
+//   res.render('Hostel_view/hostel_view');
+// });
 module.exports = router;
