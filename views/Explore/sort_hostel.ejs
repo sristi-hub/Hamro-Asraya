@@ -10,8 +10,9 @@
 <body>
    
     <div class="container">
+       <%- include('../Home/nav.ejs') %>
         <div class="main-content">
-            
+              
 
                 <%- include('side_filter.ejs')%>
 
@@ -114,6 +115,8 @@
 <!-- Show More Button -->
 
   <button class="show-more-btn" onclick="expandMoreHostels()">Show more results</button>
+
+  <%- include('../Home/fotter.ejs') %>
 
 <script>
 function expandMoreHostels() {
