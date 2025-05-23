@@ -1,0 +1,65 @@
+.nepali{
+    font-family: "Sumana", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo-img{
+    height:90px;
+    /* weight:165px; */
+    /* margin-top: -5px; */
+}
+
+.container1{
+ /* background-color: red; */
+  /* max-width: 1200px; */
+  /* //width: 100%; */
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 70px;
+  /* background-color: #ffffff; */
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: #7e22ce;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;  
+
+}
+
+.signup {
+  background-color: #7e22ce;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.signup:hover {
+  background-color: #6b21a8;
+}

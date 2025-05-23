@@ -1,0 +1,65 @@
+.rent-now {
+  background-color: #7e22ce;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.rent-now:hover {
+  background-color: #6b21a8;
+}
+
+
+.icon-container {
+  margin-right: 15px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+select {
+  border: none;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  appearance: none;
+  background: transparent;
+}
+
+
+
+.booking-form{
+     display: flex;
+    justify-content: center;         /* Vertically centers icons and text */
+    gap: -5px;            /* Adjust horizontal space between fields */
+     flex-wrap: wrap; 
+}
+
+/* .form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and text 
+}*/
+
+
+.form-group {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  flex: 1;
+  min-width: 200px;
+
+}
+

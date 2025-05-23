@@ -1,0 +1,136 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Offers section styles */
+.offers-section {
+  width: 100%;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.offers-container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Card styles */
+.offer-card {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-content {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.card-text {
+  flex: 1;
+  padding-right: 16px;
+}
+
+.offer-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.offer-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.verify-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.verify-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Student card specific styles */
+.student-card {
+  background-color: #7E22CE;
+  color: white;
+}
+
+/* Premium card specific styles */
+.premium-card {
+  background-color: white;
+  border: 1px solid #7E22CE;
+  color: #333;
+}
+
+.premium-card .verify-btn {
+  background-color: #7E22CE;
+  color: white;
+}
+
+.premium-card .verify-btn:hover {
+  background-color: #6B21A8;
+}
+
+.highlight {
+  color: #7E22CE;
+  font-weight: 600;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+  .offers-container {
+    flex-direction: column;
+  }
+  
+  .offer-card {
+    width: 100%;
+  }
+}
