@@ -6,12 +6,12 @@
 } */
 
 
-/* .raleway-regular {
+.raleway-regular {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-} */
+} 
 .nepali{
     font-family: "Sumana", serif;
     font-weight: 400;
@@ -26,7 +26,7 @@
 .homebody{
       /*background-color: #fafafa;  */
       padding-left: l0px; 
-      
+ font-family: "Raleway", sans-serif;      
 }
 .container {
   max-width: 1200px;
@@ -215,10 +215,14 @@ select {
 @media (max-width: 1024px) {
   .hero-section {
     flex-direction: column;
+    position: relative;
+
   }
   
   .hero-content {
+    position:absolute;
     max-width: 100%;
+    height:auto;
     margin-bottom: 50px;
   }
   

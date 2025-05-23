@@ -1,73 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="..\sign_up\sign_up.css">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up - आश्रय</title>
-  <link rel="stylesheet" href="stylesheets/base.css">
-  <link rel="stylesheet" href="stylesheets/auth.css">
+  <title>Login - आश्रय</title>
+  <link rel="stylesheet" href="\sign_up\log_in.css">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Sumana&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- <div class="auth-container">
-    <div class="auth-image">
-      <img src="/images/signup-illustration.png" alt="Sign up illustration">
-    </div> -->
-    
-    <!-- Right side - Form -->
+  <div class="auth-container login-container">
     <div class="auth-form-container">
-      Logo
+      <!-- Logo (optional) -->
       <div class="auth-logo">
         <img src="/images/logo.png" alt="आश्रय Logo">
       </div>
       
       <!-- Form header -->
       <div class="auth-header">
-        <h1>Sign up</h1>
-        <br>
+        <h1>Login</h1>
+         <br>
         <hr style="border: 0.5px solid gainsboro;"></hr>
-        <p>Let's get you all start up so you can access your personal account.</p>
+        <p>Login to access your Asraya account</p>
       </div>
       
-      <!-- Sign up form -->
+      <!-- Login form -->
       <form class="auth-form">
-        <!-- Name fields -->
-        <div class="form-row">
-          <div class="form-group">
-            <label style = "color:#7e22ce;" for="firstName">First Name</label>
-            <input type="text" id="firstName" class="form-control" placeholder="first name">
-          </div>
-          
-          <div class="form-group">
-            <label style = "color:#7e22ce;" for="lastName">Last Name</label>
-            <input type="text" id="lastName" class="form-control" placeholder="last name">
-          </div>
-        </div>
-        
         <!-- Email field -->
         <div class="form-group">
-          <label style = "color:#7e22ce;" for="email">Email</label>
-          <input type="email" id="email" class="form-control" placeholder="john.doe@gmail.com">
-        </div>
-        
-        <!-- Phone field -->
-        <div class="form-group">
-          <label style = "color:#7e22ce;" for="phone">Contact Number</label>
-          <input type="tel" id="phone" class="form-control" placeholder="contact number">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-control" placeholder="example@gmail.com">
         </div>
         
         <!-- Password field -->
         <div class="form-group">
-          <label style = "color:#7e22ce;" for="password">Password</label>
+          <label for="password">Password</label>
           <div class="password-field">
             <input type="password" id="password" class="form-control" placeholder="password">
             <button type="button" class="password-toggle">
@@ -79,37 +45,25 @@
           </div>
         </div>
         
-        <!-- Confirm Password field -->
-        <div class="form-group">
-          <label style = "color:#7e22ce;" for="confirmPassword">Confirm Password</label>
-          <div class="password-field">
-            <input type="password" id="confirmPassword" class="form-control" placeholder="confirm password">
-            <button type="button" class="password-toggle">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
+        <!-- Remember me and forgot password -->
+        <div class="login-options">
+          <div class="form-check">
+            <input type="checkbox" id="rememberMe">
+            <label for="rememberMe">Remember me</label>
           </div>
-        </div>
-        
-        <!-- Terms checkbox -->
-        <div class="form-check">
-          <input style = "color:#7e22ce;" type="checkbox" id="agreeTerms">
-          <label for="agreeTerms">I agree to all the <a href="#">Terms</a> and <a href="#">Privacy Policies</a></label>
+          <a href="#" class="forgot-password">Forgot Password?</a>
         </div>
         
         <!-- Submit button -->
-        <button type="submit" class="auth-submit">Create account</button>
+        <button type="submit" class="auth-submit">Login</button>
       </form>
       
-      <!-- Login link -->
+      <!-- Sign up link -->
       <div class="auth-link">
-        Already have an account? <a href="/log_in">Login</a>
-
+        Don't have an account? <a href="/sign_up">Sign up</a>
       </div>
       
-      <!-- Social login -->      
+      <!-- Social login -->
       <div class="social-divider">Or login with</div>
       
       <div class="social-buttons">
@@ -134,6 +88,24 @@
           </svg>
         </button>
       </div>
-       
+      
+      <!-- Hostel owner link -->
+      <div class="owner-link">
+        Are you the Hostel Owner? <a href="#">Sign in here</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle password visibility
+    document.querySelector('.password-toggle').addEventListener('click', () => {
+      const input = document.getElementById('password');
+      if (input.type === 'password') {
+        input.type = 'text';
+      } else {
+        input.type = 'password';
+      }
+    });
+  </script>
 </body>
 </html>

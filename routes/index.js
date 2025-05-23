@@ -13,34 +13,24 @@ router.get('/', async function(req, res, next) {
   }
 });
 
-<<<<<<< HEAD
-router.get('/signup', function (req, res, next) {
+router.get('/sign_up', function (req, res, next) {
   res.render('Sign_Up/sign_up.ejs', {
-    title: 'Hostel List',
-    hostels: hostelData.hostels
+    // title: 'Hostel List',
+    // hostels: hostelData.hostels
   });
 });
 
 
-router.get('/hostel/payment/:_id', function(req, res, next) {
-   const hostelId = req.params._id;
-  const hostel = hostelData.hostels.find(h => h.id === hostelId);
-  if (!hostel) {
-    return res.status(404).send('Hostel not found');
-=======
-// Hostel list page
-router.get('/hostels', async function(req, res, next) {
-  try {
-    const hostels = await Hostel.find();
-    res.render('Home/hostel_list', {
-      title: 'Hostel List',
-      hostels
-    });
-  } catch (err) {
-    next(err);
->>>>>>> 36fa77789c79b57a6ff2bd47d7977f9635ea1ea4
-  }
+router.get('/log_in', function (req, res, next) {
+  res.render('Sign_Up/log_in', {
+    // title: 'Hostel List',
+    // hostels: hostelData.hostels
+  });
 });
+
+
+
+
 
 // Explore/sort page
 router.get('/explore', async function(req, res, next) {
