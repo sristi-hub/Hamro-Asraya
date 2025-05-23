@@ -45,7 +45,7 @@ async function exploreHandler(req, res, next) {
   } catch (err) {
     next(err);
   }
-});
+};
 
 router.post('/explore', async function(req, res, next) {
   try {
@@ -107,7 +107,7 @@ router.post('/complever', async function(req, res, next) {
   } catch (err) {
     next(err);
   }
-}
+});
 
 // Individual hostel view page with reviews
 router.get('/hostel/:id', async (req, res) => {
