@@ -115,7 +115,7 @@
           <form action="/process-payment" method="POST">
             <input type="hidden" name="hostelId" value="<%= hostel._id %>"/>
             <input type="hidden" name="amount" value="600"/>
-            <button type="submit" class="payment-button">Proceed to Pay</button>
+            <button type="button" onclick = "document.location.href = '#'" class="payment-button">Proceed to Pay</button>
           </form>
         </div>
       </div>
