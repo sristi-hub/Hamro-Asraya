@@ -99,24 +99,26 @@
   }
 
   function submitMessage(event) {
-    event.preventDefault();
-    const message = document.querySelector("textarea[name='message']").value;
-    const hostelId = window.location.pathname.split("/")[2];
 
-    fetch(`/hostel/${hostelId}/review`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message }),
-    })
-    .then(response => response.json())
-    .then(data => {
-      alert(data.message);
-      location.reload();
-    })
-    .catch(err => {
-      console.error("Error submitting review:", err);
-      alert("Failed to submit review.");
-    });
+    document.getElementById("myModal").style.display = "none";
+    // event.preventDefault();
+    // const message = document.querySelector("textarea[name='message']").value;
+    // const hostelId = window.location.pathname.split("/")[2];
+
+    // fetch(`/hostel/${hostelId}/review`, {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({ message }),
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //   alert(data.message);
+    //   location.reload();
+    // })
+    // .catch(err => {
+    //   console.error("Error submitting review:", err);
+    //   alert("Failed to submit review.");
+    // });
   }
 </script>
 

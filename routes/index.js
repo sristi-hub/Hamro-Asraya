@@ -33,6 +33,7 @@ router.get('/log_in', function (req, res, next) {
 // Explore/sort page
 router.get('/explore', exploreHandler);
 router.get('/hostel/explore', exploreHandler);
+router.get('/explore/hostel', exploreHandler);
 
 async function exploreHandler(req, res, next) {
   try {
@@ -47,18 +48,18 @@ async function exploreHandler(req, res, next) {
   }
 };
 
-router.post('/explore', async function(req, res, next) {
-  try {
-    const hostels = await Hostel.find();
-    res.render('Explore/sort_hostel', {
-      title: 'Hostel List',
-      hostels,
-      activePage: 'explore'
-    });
-  } catch (err) {
-    next(err);
-  }
-});
+// router.post('/explore', async function(req, res, next) {
+//   try {
+//     const hostels = await Hostel.find();
+//     res.render('Explore/sort_hostel', {
+//       title: 'Hostel List',
+//       hostels,
+//       activePage: 'explore'
+//     });
+//   } catch (err) {
+//     next(err);
+//   }
+// });
 
 
 // /explore/female
