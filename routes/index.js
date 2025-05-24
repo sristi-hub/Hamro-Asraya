@@ -114,7 +114,9 @@ router.get('/hostel/:id', async (req, res) => {
   const hostel = await Hostel.findById(req.params.id);
   const reviews = await Review.find({ hostelId: hostel._id });
 
-  res.render('Hostel_view/hostel_view', { hostel, reviews });
+  res.render('Hostel_view/hostel_view', { hostel, reviews,
+    activePage: 'Hostels'
+});
 });
 
 
