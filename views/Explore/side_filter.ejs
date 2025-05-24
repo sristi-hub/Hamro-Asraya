@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/public/stylesheets/Explore/sort_hostel.css">
+    <link rel="stylesheet" href="/stylesheets/Explore/sort_hostel.css">
 </head>
 <body>
     <div class="filters">
@@ -48,15 +48,15 @@
                         <i class="fas fa-chevron-up filter-toggle"></i>
                     </div>
                     <div class="checkbox-list">
-                        <label class="checkbox-item">
-                            <input type="checkbox">
-                            Boys (Student)
-                        </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox">
-                            Girls(Student)
-                        </label>
-                    </div>
+  <label class="checkbox-item">
+    <input type="checkbox" name="gender" value="male">
+    Boys (Student)
+  </label>
+  <label class="checkbox-item">
+    <input type="checkbox" name="gender" value="female">
+    Girls (Student)
+  </label>
+</div>
                 </div>
 
                 <div class="filter-section">
@@ -120,5 +120,26 @@
                         <i class="fas fa-chevron-down dropdown-arrow"></i>
                     </div>
                 </div>
-</body>
+
+            <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const checkboxes = document.querySelectorAll('input[name="gender"]');
+
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener('change', () => {
+        const selectedGenders = Array.from(document.querySelectorAll('input[name="gender"]:checked'))
+          .map(cb => cb.value);
+
+        if (selectedGenders.length > 0) {
+          const genderPath = selectedGenders.join(',');
+          window.location.href = `/explore/${genderPath}`;
+        } else {
+          window.location.href = `/explore`; // Or redirect to show all
+        }
+      });
+    });
+  });
+</script>
+
+
 </html>

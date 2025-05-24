@@ -60,6 +60,41 @@ router.post('/explore', async function(req, res, next) {
   }
 });
 
+
+// /explore/female
+router.get('/explore/:gender', async (req, res) => {
+  const genderParam = req.params.gender.toLowerCase(); // ensure input is lowercase
+  const genderArray = genderParam.split(','); // e.g., ['female', 'male']
+
+  let query = {};
+
+  if (genderParam !== 'all') {
+    query = {
+      $expr: {
+        $in: [
+          { $toLower: "$gender" },
+          genderArray
+        ]
+      }
+    };
+  }
+
+  try {
+    const hostels = await Hostel.find(query);
+    res.render('Explore/sort_hostel', {
+      hostels,
+      activePage: 'explore',
+      selectedGenders: genderArray,
+    });
+  } catch (error) {
+    res.status(500).send("Error fetching hostels");
+  }
+});
+
+
+
+
+
 router.get('/verify', async function(req, res, next) {
   try {
     const hostels = await Hostel.find();
@@ -122,7 +157,7 @@ router.get('/hostel/:id', async (req, res) => {
   const hostel = await Hostel.findById(req.params.id);
   const reviews = await Review.find({ hostelId: hostel.id });
 
-  res.render('Hostel_view/hostel_view', {user: req.user || null, hostel, reviews });
+  res.render('Hostel_view/hostel_view', {user: req.user || null, hostel, reviews ,activePage: 'hostels' });
 });
 
 
