@@ -1,0 +1,184 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Verification container */
+.verification-container {
+  width: 100%;
+  max-width: 900px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.verification-form {
+  padding: 40px;
+}
+
+/* Form header */
+.form-header {
+  margin-bottom: 30px;
+}
+
+.form-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Progress bar */
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: #7e22ce;
+  gap:5px;
+}
+
+.current-step, .total-steps {
+  font-weight: 600;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #7e22ce;
+  border-radius: 4px;
+}
+
+/* Form instructions */
+.form-instructions {
+  margin-bottom: 20px;
+}
+
+.form-instructions p {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Textarea */
+.form-textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 16px;
+  background-color: #f9fafb;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  color: #333;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+.form-textarea::placeholder {
+  color: #aaa;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: #7e22ce;
+  box-shadow: 0 0 0 3px rgba(126, 34, 206, 0.1);
+  background-color: white;
+}
+
+/* Word count */
+.word-count {
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Form actions */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.btn-cancel {
+  padding: 12px 24px;
+  min-width: 120px;
+  background-color: transparent;
+  color: #7e22ce;
+  border: 1px solid #7e22ce;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-continue {
+  padding: 12px 24px;
+  min-width: 120px;
+  background-color: #7e22ce;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background-color: rgba(126, 34, 206, 0.05);
+}
+
+.btn-continue:hover {
+  background-color: #6b21a8;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .verification-form {
+    padding: 30px 20px;
+  }
+  
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+  
+  .btn-cancel, .btn-continue {
+    width: 100%;
+  }
+}

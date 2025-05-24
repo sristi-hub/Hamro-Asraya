@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href='\stylesheets\Home\nav.css'>
-   
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/Home/nav.css" />
+  <title>Document</title>
 </head>
 <body>
-     <div class="container1">
+  <div class="container1">
     <!-- Header -->
-   <header>
-  <div class="logo">
-    <img src="/images/logo.png" alt="Logo" class="logo-img">
+    <header>
+      <div class="logo">
+        <img src="/images/logo.png" alt="Logo" class="logo-img" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/" class="<%= activePage === 'home' ? 'active' : '' %>">Home</a></li>
+          <li><a href="/explore" class="<%= activePage === 'explore' ? 'active' : '' %>">Explore</a></li>
+          <li><a href="/hostels" class="<%= activePage === 'hostels' ? 'active' : '' %>">Hostels</a></li>
+          <li><a href="/about" class="<%= activePage === 'about' ? 'active' : '' %>">About</a></li>
+          <li><a href="/contact" class="<%= activePage === 'contact' ? 'active' : '' %>">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="signup" onclick="window.location.href='/log_in';">Log In</button>
+    </header>
   </div>
-  <nav>
-    <ul>
-      <li><a href="/" class="active">Home</a></li>
-      <li><a href="/explore">Explore</a></li>
-      <li><a href="">Hostels</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-
-  <% if (user) { %>
-    <div class="user-avatar">
-      <img src="<%= user.avatar || 'https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg' %>" alt="User Avatar" class="avatar-img">
-    </div>
-  <% } else { %>
-    <button class="signup" onclick="window.location.href='/log_in';">Log In</button>
-  <% } %>
-</header>
-
-    </div>
-
-
 </body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verification Form - Step 4</title>
+  <link rel="stylesheet" href="stylesheets\verification_form\3verification.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="verification-container">
+    <div class="verification-form">
+      <header class="form-header">
+        <h1>Verification Form</h1>
+        <div class="progress-container">
+          <div class="progress-text">Step <span class="current-step">3</span> of <span class="total-steps">3</span></div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 100%;"></div>
+          </div>
+        </div>
+      </header>
+
+      <form action ="/complever" method = "POST">
+        <div class="form-instructions">
+          <p>Please Specify in 250 words why we should verify you.</p>
+        </div>
+
+        <div class="form-group">
+          <textarea id="verificationReason" class="form-textarea" rows="10" placeholder="Type your reason here..."></textarea>
+          <div class="word-count"><span id="currentCount">0</span>/250 words</div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn-cancel" onclick="window.location.href='/'">Cancel</button>
+          <button type="submit" class="btn-continue">Continue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Word count functionality
+    const textarea = document.getElementById('verificationReason');
+    const wordCount = document.getElementById('currentCount');
+    
+    textarea.addEventListener('input', function() {
+      const text = this.value.trim();
+      const words = text ? text.split(/\s+/) : [];
+      const count = words.length;
+      
+      wordCount.textContent = count;
+      
+      // Optional: Limit to 250 words
+      if (count > 250) {
+        const limitedText = words.slice(0, 250).join(' ');
+        this.value = limitedText;
+        wordCount.textContent = 250;
+      }
+    });
+  </script>
+</body>
+</html>

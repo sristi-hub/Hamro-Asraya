@@ -32,7 +32,12 @@ nav a {
   transition: color 0.3s;
 }
 
-nav a:hover, nav a.active {
+nav a:hover, a.active {
+  color: #7e22ce;
+}
+
+nav a:hover,
+nav a.active {
   color: #7e22ce;
 }
 
