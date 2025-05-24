@@ -17,34 +17,34 @@
             <div class="login-form">
                 <h1>Login</h1>
                 <p class="subtitle">Login to access your Asraya account.</p>
-                
-                <form>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="john.doe@gmail.com">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <div class="password-input">
-                            <input type="password" id="password" placeholder="••••••••••••••••">
-                            <button type="button" class="toggle-password">
-                                <i class="far fa-eye"></i>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="form-options">
-                        <div class="remember-me">
-                            <input type="checkbox" id="remember">
-                            <label for="remember">Remember me</label>
-                        </div>
-                        <a href="#" class="forgot-password">Forgot Password?</a>
-                    </div>
-                    
-                    <button type="submit" class="login-button">Login</button>
-                </form>
-                
+<form method="POST" action="/log_in">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="john.doe@gmail.com" required>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <div class="password-input">
+      <input type="password" id="password" name="password" placeholder="••••••••••••••••" required>
+      <button type="button" class="toggle-password">
+        <i class="far fa-eye"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Optional: Remember me and Forgot password -->
+  <div class="form-options">
+    <div class="remember-me">
+      <input type="checkbox" id="remember" name="remember">
+      <label for="remember">Remember me</label>
+    </div>
+    <a href="#" class="forgot-password">Forgot Password?</a>
+  </div>
+
+  <button type="submit" class="login-button">Login</button>
+</form>
+
                 <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
                 
                 <div class="social-login">

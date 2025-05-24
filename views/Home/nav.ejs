@@ -10,23 +10,29 @@
 <body>
      <div class="container1">
     <!-- Header -->
-    <header>
-      <div class="logo">
-           <img src="/images/logo.png" alt="Logo" class="logo-img">
-      </div>
-      <nav>
-        <ul>
-          <li><a href="/" class="active">Home</a></li>
-          <li><a href="/explore">Explore</a></li>
-          <li><a href="">Hostels</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-<!-- <button class="signup" onclick="window.location.href='/sign_up';">Sign Up</button> -->
-    <button class="signup" onclick="window.location.href='/log_in';">Log In</button> 
+   <header>
+  <div class="logo">
+    <img src="/images/logo.png" alt="Logo" class="logo-img">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/explore">Explore</a></li>
+      <li><a href="">Hostels</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-    </header>
+  <% if (user) { %>
+    <div class="user-avatar">
+      <img src="<%= user.avatar || 'https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg' %>" alt="User Avatar" class="avatar-img">
+    </div>
+  <% } else { %>
+    <button class="signup" onclick="window.location.href='/log_in';">Log In</button>
+  <% } %>
+</header>
+
     </div>
 
 

@@ -7,7 +7,7 @@ const Review = require("../models/review");
 router.get('/', async function(req, res, next) {
   try {
     const hostels = await Hostel.find();
-    res.render('home', { title: 'Express', hostels });
+    res.render('home', {user: req.user || null, hostels });
   } catch (err) {
     next(err);
   }
@@ -40,7 +40,7 @@ async function exploreHandler(req, res, next) {
   try {
     const hostels = await Hostel.find();
     res.render('Explore/sort_hostel.ejs', {
-      title: 'Hostel List',
+      user: req.user || null,
       hostels
     });
   } catch (err) {
@@ -48,13 +48,23 @@ async function exploreHandler(req, res, next) {
   }
 }
 
+
+function isAuthenticated(req, res, next) {
+  if (req.isAuthenticated && req.isAuthenticated()) {
+    return next(); // User is logged in
+  }
+  res.redirect('/log_in'); // Redirect if not logged in
+}
+
 // Individual hostel view page with reviews
 router.get('/hostel/:id', async (req, res) => {
   const hostel = await Hostel.findById(req.params.id);
-  const reviews = await Review.find({ hostelId: hostel._id });
+  const reviews = await Review.find({ hostelId: hostel.id });
 
-  res.render('Hostel_view/hostel_view', { hostel, reviews });
+  res.render('Hostel_view/hostel_view', {user: req.user || null, hostel, reviews });
 });
+
+
 
 
 
@@ -67,7 +77,7 @@ router.get('/payment/:id', async function(req, res, next) {
     }
 
     res.render('Hostel_payment/payment.ejs', {
-      
+      user: req.user || null,
       hostel
     });
   } catch (err) {
