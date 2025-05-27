@@ -1,4 +1,4 @@
-# Contributing to Student Hostel Rental Website
+# Contributing to Hamro Asraya
 
 Thank you for your interest in contributing to our project! We’re excited to collaborate with others who want to help students find their home away from home. 💚
 
