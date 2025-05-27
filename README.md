@@ -88,8 +88,8 @@ If you have any questions or feedback, feel free to reach out!
 
 **Email**: jastimilsina@gmail.com , asmeetapdl@gmail.com , sristi8.sharma@gmail.com
 
-**LinkedIn**: [Jasmine Timilsina](https://www.linkedin.com/in/yjasminetimilsina)
-
+**LinkedIn**: [Jasmine Timilsina](https://www.linkedin.com/in/yjasminetimilsina), [Sristi Sharma](https://www.linkedin.com/in/sristi-sharma-b3988b304/)
+)
 ---
 
 Enjoy booking your next home away from home! 😊
