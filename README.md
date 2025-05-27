@@ -93,3 +93,7 @@ If you have any questions or feedback, feel free to reach out!
 ---
 
 Enjoy booking your next home away from home! 😊
+
+---
+
+© 2025 Team Asraya. All rights reserved.
