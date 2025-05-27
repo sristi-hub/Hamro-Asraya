@@ -1,4 +1,4 @@
-**Hamro आश्रय**
+#Hamro आश्रय
 
 **Find your home away from home.**
 
@@ -85,7 +85,8 @@ We welcome contributions! If you'd like to improve the project or add features, 
 ## 📞 **Contact Us**
 
 If you have any questions or feedback, feel free to reach out!
-**Email**: jastimilsina@gmail.com (mailto:jastimilsina@gmail.com)
+
+**Email**: jastimilsina@gmail.com
 
 **LinkedIn**: [Jasmine Timilsina](https://www.linkedin.com/in/yjasminetimilsina)
 
