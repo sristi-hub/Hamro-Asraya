@@ -86,6 +86,7 @@ We welcome contributions! If you'd like to improve the project or add features, 
 
 If you have any questions or feedback, feel free to reach out!
 **Email**: jastimilsina@gmail.com (mailto:jastimilsina@gmail.com)
+
 **LinkedIn**: [Jasmine Timilsina](https://www.linkedin.com/in/yjasminetimilsina)
 
 ---
