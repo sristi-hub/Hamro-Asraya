@@ -86,10 +86,14 @@ We welcome contributions! If you'd like to improve the project or add features, 
 
 If you have any questions or feedback, feel free to reach out!
 
-**Email**: jastimilsina@gmail.com
+**Email**: jastimilsina@gmail.com , asmeetapdl@gmail.com , sristi8.sharma@gmail.com
 
 **LinkedIn**: [Jasmine Timilsina](https://www.linkedin.com/in/yjasminetimilsina)
 
 ---
 
 Enjoy booking your next home away from home! 😊
+
+---
+
+© 2025 Team Asraya. All rights reserved.
